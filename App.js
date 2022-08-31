@@ -33,6 +33,11 @@ import { styles1, viewChilds } from './assets/styles/Mystyles.js'
       //Actualice el estado resultado a través de su método respectivo
       setResultado(parseFloat(valor1) - parseFloat(valor2))
     } */
+    function Limpiar () {
+      setValor1('');
+      setValor2('');
+      setResultado(0);
+    }
   return (
     //<View style={{backgroundColor:'#F8BBD0',flex:1,justifyContent:'center',alignItems:'center',borderRadius:10}}>
     //<View style={styles.container}>
@@ -87,6 +92,12 @@ import { styles1, viewChilds } from './assets/styles/Mystyles.js'
 
         <Button title="Dividir"
         onPress={()=> calcular("/")}
+        />
+
+        <Text>{('\n')}</Text>
+
+        <Button title="Limpiar"
+        onPress={Limpiar}
         />
   
       </View>
